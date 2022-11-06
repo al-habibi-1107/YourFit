@@ -1,4 +1,28 @@
-# YourFit
-Random outfit generator
-  Step 1 - Weather based outfit generator
-  Step 2 - Add like to an outfit to classification
+## YourFit
+
+### About The Project
+
+
+Outfit Generator
+
+
+### Built With
+
+* [![SQL][SQL]]
+* [![React][React.js]]
+
+
+### Steps
+
+* Make DB
+* Get weather data
+* Based on weather data , choose color and material type
+* option to like an outfit for suggestion
+
+
+### DB COLS:
+1. Color
+2. Material
+3. Top wear / bottom wear / footwear
+4. Category (Formal , Casual , Ethnic , Partywear )
+
