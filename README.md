@@ -8,8 +8,12 @@ Outfit Generator
 
 ### Built With
 
-* [![SQL][SQL]]
-* [![React][React.js]]
+* NextJs
+* ReactJs
+* Prisma
+* PostgreSQL
+* Planetscale
+
 
 
 ### Steps
