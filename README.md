@@ -13,6 +13,7 @@ Outfit Generator
 * Prisma
 * PostgreSQL
 * Planetscale
+* Cloudinary
 
 
 
