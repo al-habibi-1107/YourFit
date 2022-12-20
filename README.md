@@ -30,3 +30,8 @@ Outfit Generator
 3. Top wear / bottom wear / footwear
 4. Category (Formal , Casual , Ethnic , Partywear )
 
+### WEATHER COLS
+1. Condition
+2. Temperature
+3. Wind
+4. Precipitation Chance
