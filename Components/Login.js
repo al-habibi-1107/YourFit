@@ -1,26 +1,28 @@
-import {
-    Button,
-    Flex,
-    FormLabel,
-    Input,
-} from "@chakra-ui/react";
+import { Button, Flex, FormLabel, Input } from "@chakra-ui/react";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
+import { useDispatch } from "react-redux";
+import { login } from "../slices/loginSlice";
+import { useSession, signIn, signOut } from "next-auth/react";
 function Login() {
     const [email, setEmail] = useState("");
     const [pwd, setPwd] = useState("");
     const [errorText, setErrorText] = useState("");
+    const dispatch = useDispatch();
     const handleSubmit = async () => {
-        const res = await axios.post("/api/auth", { email, pwd });
+        const res = await axios.post("/api/auth", {
+            email,
+            pwd,
+        });
         console.log(res.data);
         if (
             res.data.result === "Login Successful" ||
             res.data.result === "User created"
-        )
+        ) {
             router.push("/dashboard");
-        else setErrorText("Invalid Password");
+            dispatch(login(email));
+        } else setErrorText("Invalid Password");
     };
     const router = useRouter();
     useEffect(() => {

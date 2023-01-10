@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Script from "next/script"
-import Login from "../Components/Login";
+import Login from "../Components/Login"
 export default function Home() {
     return (
         <>

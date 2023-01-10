@@ -1,8 +1,7 @@
-import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcrypt";
+import prisma from "../../lib/prisma"
 export default async function handler(req, res) {
     const { email, pwd } = req.body;
-    const prisma = new PrismaClient();
     const user = await prisma.user.findUnique({
         where: {
             email: email,

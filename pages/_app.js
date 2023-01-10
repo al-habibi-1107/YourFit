@@ -1,10 +1,16 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import "../styles/globals.css";
-function MyApp({ Component, pageProps }) {
+import { store } from "./store";
+import { Provider } from "react-redux";
+import { SessionProvider } from "next-auth/react";
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     return (
-        <ChakraProvider>
-            <Component {...pageProps} />
-        </ChakraProvider>
+        // <SessionProvider session={session}>
+            <Provider store={store}>
+                <ChakraProvider>
+                    <Component {...pageProps} />
+                </ChakraProvider>
+            </Provider>
+        // </SessionProvider>
     );
 }
 
